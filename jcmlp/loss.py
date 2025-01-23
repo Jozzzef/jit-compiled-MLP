@@ -10,7 +10,6 @@ def mse(y_hat, y):
 @jit(nopython=True)
 def mse_derivative(y_hat, y):
     """Partial Derivative of the Mean Squared Error with respect to y_hat"""
-    print(y_hat, y)
     return 2.0 * (y_hat - y) / y_hat.shape[0] # 2(y_hat - y)/n
 
 @jit(nopython=True)
